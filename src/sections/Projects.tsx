@@ -3,8 +3,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import projectJanakaTailers from "@/assets/projectJanakaTailers.png";
-import projectTaskapp from "@/assets/project-taskapp.jpg";
-import projectDashboard from "@/assets/project-dashboard.jpg";
+import projectWeatherDashboard from "@/assets/project-weather-dashboard.png";
+import projectPortfolio from "@/assets/project-portfolio.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,26 +12,26 @@ const projects = [
   {
     title: "Tailer Website",
     description: "React Website for Tailer in pelawatta.",
-    tech: ["React", "Tailwind CSS", "TypeScript", "shadcn-ui", "Vite"],
+    tech: ["React", "Tailwind", "TypeScript", "shadcn-ui"],
     image: projectJanakaTailers,
-    github: "#",
-    live: "#",
+    github: "https://github.com/Akila-Piumal/Janaka-Tailers.git",
+    live: "https://janaka-tailers.vercel.app/",
   },
   {
-    title: "Task Management App",
-    description: "Cross-platform mobile app for task tracking with real-time sync and notifications.",
-    tech: ["Ionic", "Angular", "Firebase"],
-    image: projectTaskapp,
-    github: "#",
-    live: "#",
+    title: "Weather Dashboard",
+    description: "Weather Dashboard web app using Angular and OpenWeatherMap APIs.",
+    tech: ["Angular", "OpenWeatherMap"],
+    image: projectWeatherDashboard,
+    github: "https://github.com/Akila-Piumal/Weather_Dashboard",
+    live: "https://weather-dashboard-eta-azure.vercel.app/",
   },
   {
-    title: "Portfolio Dashboard",
-    description: "Analytics dashboard with interactive charts and data visualization for business insights.",
-    tech: ["React", "TypeScript", "Tailwind"],
-    image: projectDashboard,
-    github: "#",
-    live: "#",
+    title: "Portfolio Website",
+    description: "Proffesional and Modern Portfolio website with Next.js.",
+    tech: ["Next.js", "TypeScript", "Tailwind", "shadcn-ui"],
+    image: projectPortfolio,
+    github: "https://github.com/Akila-Piumal/portfolio_new",
+    live: "https://portfolio-new-ashy-rho.vercel.app/",
   },
 ];
 
@@ -100,6 +100,7 @@ const Projects = () => {
                 <div className="flex gap-4">
                   <a
                     href={project.github}
+                    target="_blank"
                     className="text-muted-foreground hover:text-primary transition-colors"
                     aria-label="GitHub"
                   >
@@ -107,6 +108,7 @@ const Projects = () => {
                   </a>
                   <a
                     href={project.live}
+                    target="_blank"
                     className="text-muted-foreground hover:text-primary transition-colors"
                     aria-label="Live Demo"
                   >

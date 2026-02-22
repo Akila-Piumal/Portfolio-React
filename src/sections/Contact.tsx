@@ -84,15 +84,15 @@ const Contact = () => {
             <h3 className="text-xl font-bold font-display mb-4">Contact Info</h3>
 
             <div className="space-y-4">
-              <a href="mailto:akilapiumal@example.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:akilapiumal16@gmail.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                 <FiMail className="text-primary" size={20} />
-                akilapiumal@example.com
+                akilapiumal16@gmail.com
               </a>
-              <a href="#" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/akila-piumal-3b7040229/" target="_blank" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                 <FaLinkedin className="text-primary" size={20} />
                 LinkedIn
               </a>
-              <a href="#" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://github.com/Akila-Piumal" target="_blank" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                 <FaGithub className="text-primary" size={20} />
                 GitHub
               </a>
