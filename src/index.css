@@ -63,7 +63,12 @@
     font-family: 'Inter', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Space Grotesk', sans-serif;
   }
 
@@ -76,6 +81,23 @@
   .gradient-text {
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-primary);
+  }
+
+  .gradient-text-animated {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg,
+        hsl(239, 84%, 67%),
+        hsl(258, 90%, 66%),
+        hsl(280, 80%, 65%),
+        hsl(258, 90%, 66%),
+        hsl(239, 84%, 67%));
+    background-size: 300% 100%;
+    animation: gradient-shift 8s ease infinite;
+    transition: letter-spacing 0.4s ease;
+  }
+
+  .gradient-text-animated:hover {
+    letter-spacing: 0.04em;
   }
 
   .gradient-bg {
@@ -112,13 +134,93 @@
   }
 }
 
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float-particle {
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.3;
+  }
+
+  25% {
+    transform: translateY(-30px) translateX(10px) scale(1.2);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: translateY(-15px) translateX(-8px) scale(0.9);
+    opacity: 0.4;
+  }
+
+  75% {
+    transform: translateY(-40px) translateX(5px) scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes grid-pulse {
+
+  0%,
+  100% {
+    opacity: 0.03;
+  }
+
+  50% {
+    opacity: 0.07;
+  }
+}
+
+@keyframes orb-drift {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -40px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes line-sweep {
+  0% {
+    transform: translateX(-100%) rotate(-45deg);
+  }
+
+  100% {
+    transform: translateX(200%) rotate(-45deg);
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: hsl(222, 47%, 11%);
 }
+
 ::-webkit-scrollbar-thumb {
   background: hsl(239, 84%, 67%);
   border-radius: 3px;
