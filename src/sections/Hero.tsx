@@ -1,7 +1,7 @@
 import { useEffect, useRef, useCallback  } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FaReact, FaAngular, FaJava } from "react-icons/fa";
+import { FaReact, FaAngular, FaJava, FaGithub, FaLinkedinIn, FaWhatsapp} from "react-icons/fa";
 import { SiSpringboot, SiTypescript, SiIonic } from "react-icons/si";
 import profileImg from "@/assets/profile.png";
 import RotatingText from "@/components/RotatingText";
@@ -337,9 +337,11 @@ const Hero = () => {
           <div className="flex-1 text-center md:text-left">
             <span
               ref={greetingRef}
-              className="inline-block text-lg md:text-xl text-muted-foreground mb-4"
+              className="inline-flex items-center gap-3 text-sm md:text-base font-medium tracking-widest uppercase text-primary mb-4"
             >
-              Hi, I'm Akila 👋
+              <span className="inline-block w-8 h-px bg-primary" />
+              Full Stack Developer
+              <span className="inline-block w-8 h-px bg-primary" />
             </span>
 
 
@@ -351,10 +353,14 @@ const Hero = () => {
 
             <h1
               ref={titleRef}
-              className="text-4xl sm:text-5xl md:text-6xl font-bold font-display mb-6 leading-tight"
+              className="text-4xl sm:text-5xl md:text-7xl font-bold font-display mb-4 leading-tight"
             >
-              <RotatingText />
+              Hi, I'm <span className="gradient-text">Akila</span>
             </h1>
+
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold font-display mb-6 text-foreground/80">
+              <RotatingText />
+            </h2>
 
             <p
               ref={subtitleRef}
@@ -377,6 +383,26 @@ const Hero = () => {
               >
                 Contact Me
               </button>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex gap-3 mt-8 justify-center md:justify-start">
+              {[
+                { icon: FaGithub, href: "https://github.com/Akila-Piumal", label: "GitHub" },
+                { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/akila-piumal-3b7040229/", label: "LinkedIn" },
+                { icon: FaWhatsapp, href: "https://wa.me/94783223485", label: "WhatsApp" },
+              ].map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-10 h-10 rounded-full border border-border/60 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary hover:bg-primary/10 transition-all duration-300"
+                >
+                  <Icon size={16} />
+                </a>
+              ))}
             </div>
           </div>
 
