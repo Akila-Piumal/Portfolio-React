@@ -351,7 +351,7 @@ const Hero = () => {
 
             <h1
               ref={titleRef}
-              className="text-4xl sm:text-5xl md:text-7xl font-bold font-display mb-6 leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl font-bold font-display mb-6 leading-tight"
             >
               <RotatingText />
             </h1>

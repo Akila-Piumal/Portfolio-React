@@ -13,10 +13,10 @@ const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const contactLinks = [
-  { icon: FiMail, label: "akilapiumal@example.com", href: "mailto:akilapiumal@example.com" },
+  { icon: FiMail, label: "akilapiumal16@gmail.com", href: "mailto:akilapiumal16@gmail.com" },
   { icon: FaWhatsapp, label: "WhatsApp", href: "https://wa.me/94783223485" },
-  { icon: FaLinkedin, label: "LinkedIn", href: "#" },
-  { icon: FaGithub, label: "GitHub", href: "#" },
+  { icon: FaLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/akila-piumal-3b7040229/" },
+  { icon: FaGithub, label: "GitHub", href: "https://github.com/Akila-Piumal" },
   { icon: FiMapPin, label: "Sri Lanka", href: undefined },
 ];
 
@@ -70,9 +70,9 @@ const Contact = () => {
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <div className="contact-anim text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase gradient-bg text-primary-foreground mb-4">
+          {/* <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase gradient-bg text-primary-foreground mb-4">
             Contact
-          </span>
+          </span> */}
           <h2 className="text-3xl md:text-4xl font-bold font-display">
             Get In <span className="gradient-text">Touch</span>
           </h2>

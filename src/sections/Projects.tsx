@@ -65,6 +65,7 @@ const ProjectCard = ({
       <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
         <a
           href={project.github}
+          target="_blank"
           className="w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm border border-border flex items-center justify-center text-foreground hover:text-primary hover:border-primary transition-colors"
           aria-label="GitHub"
         >
@@ -72,6 +73,7 @@ const ProjectCard = ({
         </a>
         <a
           href={project.live}
+          target="_blank"
           className="w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm border border-border flex items-center justify-center text-foreground hover:text-primary hover:border-primary transition-colors"
           aria-label="Live Demo"
         >
@@ -384,6 +386,7 @@ const Projects = () => {
                           <div className="flex gap-4">
                             <a
                               href={project.github}
+                              target="_blank"
                               className="text-muted-foreground hover:text-primary transition-colors"
                               aria-label="GitHub"
                             >
@@ -391,6 +394,7 @@ const Projects = () => {
                             </a>
                             <a
                               href={project.live}
+                              target="_blank"
                               className="text-muted-foreground hover:text-primary transition-colors"
                               aria-label="Live Demo"
                             >

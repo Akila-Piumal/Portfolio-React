@@ -3,8 +3,9 @@ import gsap from "gsap";
 
 const titles = [
   "Full Stack Web Developer",
-  "Associate Software Engineer",
+  // "Associate Software Engineer",
   "Frontend Developer",
+  "Backend Developer",
   "Problem Solver",
 ];
 

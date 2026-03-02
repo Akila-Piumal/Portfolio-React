@@ -210,6 +210,14 @@ const About = () => {
               ref={buttonRef}
               className="gradient-bg px-6 py-3 rounded-lg font-semibold text-primary-foreground transition-shadow duration-300 inline-flex items-center gap-2 mt-4 hover:shadow-[0_0_30px_-5px_hsl(239_84%_67%/0.5)]"
               style={{ opacity: 0 }}
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/cv/Akila-Piumal-CV.pdf";
+                link.download = "Akila-Piumal-Resume.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
             >
               <FiDownload />
               Download Resume
